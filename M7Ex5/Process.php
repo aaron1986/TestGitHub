@@ -2,7 +2,7 @@
 
 session_start();
 
-$name=$_POST["name"];
+$name=strip_tags($_POST["name"]);
 
 $_SESSION["name"]= $name;
 

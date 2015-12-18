@@ -2,7 +2,7 @@
 
 session_start();
  if(isset($_SESSION['name']) ) {
-     echo "Hello" .$_SESSION['name'];
+     echo "Hello" . htmlspecialchars($_SESSION['name']);
  }
  else {
      echo "Welcome Guest";
@@ -10,7 +10,7 @@ session_start();
  
  ?>
  
- <form action="process.php" method="post">
+ <form action="Process.php" method="post">
      Name:<input type="text" name="name"/>
      <input type="submit" name="submit" value="Set Name"/>
  </form>
